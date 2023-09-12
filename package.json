@@ -1,7 +1,6 @@
 {
   "name": "@nosytools/react-forms",
   "version": "1.0.2",
-  "type": "module",
   "devDependencies": {
     "@happy-dom/global-registrator": "^11.0.2",
     "@testing-library/react": "^14.0.0",
@@ -16,7 +15,6 @@
     "typescript": "^5.0.0"
   },
   "main:": "out/index.js",
-  "types": "out/index.d.js",
   "files": [
     "out/**/*"
   ]

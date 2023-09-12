@@ -1,6 +1,5 @@
 {
-  "include": ["src/**/*"],
-
+  "include": ["src"],
   "compilerOptions": {
     "lib": ["ESNext"],
     "module": "esnext",
@@ -23,7 +22,6 @@
 	"declaration": true,
 	"declarationMap": true,
 	"emitDeclarationOnly": true,
-	"outFile": "out/index.js",
-	"rootDir": "src"
+	"outFile": "out/index.js"
   }
 }
