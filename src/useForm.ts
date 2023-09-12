@@ -1,8 +1,8 @@
 import { useCallback, useMemo, useState } from "react";
 
 import useSafeDebounce from "./useSafeDebounce";
-import reactNativeAdapter from "./adapter/reactNative";
 import type { Adapter } from "./adapter/types";
+import reactNativeAdapter from "./adapter/reactNative";
 
 type IndependentField<T> = {
   error: string;
@@ -86,7 +86,7 @@ const validate = <T>(form: Form<T>, state: FormState<T>): boolean =>
 
 type Adapted<T> = T extends Adapter<infer R> ? R : never;  
 
-const useForm = <T, U extends Adapter<any>>(form: Form<T>, adapt: U) => {
+const useForm = <T>(form: Form<T>, adapt: Adapter<any> = reactNativeAdapter) => {
   const [state, setState] = useState<FormState<T>>(() =>
     createInitialState(form)
   );
@@ -101,7 +101,7 @@ const useForm = <T, U extends Adapter<any>>(form: Form<T>, adapt: U) => {
 
   const unboxed = useMemo(() => unbox(state), [state]);
 
-  const register = (key: keyof Form<T>): Adapted<U> => {
+  const register = (key: keyof Form<T>): Adapted<typeof adapt> => {
     const { error, parser } = form[key];
     const { raw, parsed } = state[key];
 

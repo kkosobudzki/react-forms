@@ -13,7 +13,7 @@ type TestFormObject = {
 };
 
 const TestForm = () => {
-  const [register, _, valid] = useForm<TestFormObject, typeof reactAdapter>(
+  const [register, _, valid] = useForm<TestFormObject>(
     {
       name: {
         validator: (name: string) => name.length >= 3,

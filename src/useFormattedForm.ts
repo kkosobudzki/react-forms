@@ -1,3 +1,4 @@
+import type { Adapter } from './adapter/types';
 import useForm, { Field, Form } from './useForm';
 
 const compose =

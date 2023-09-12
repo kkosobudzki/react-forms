@@ -1,6 +1,6 @@
 {
-  "name": "forms",
-  "version": "0.0.1",
+  "name": "@nosytools/react-forms",
+  "version": "1.0.0",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -15,5 +15,18 @@
   "peerDependencies": {
     "react": "^17.0.0",
     "typescript": "^5.0.0"
-  }
+  },
+  "exports": {
+	".": {
+		"import": {
+			"types": "out/index.d.ts",
+			"default": "out/index.js"
+		}
+	}
+  },
+  "main:": "out/index.js",
+  "types": "out/index.d.ts",
+  "files": [
+	"out/**/*"
+  ]
 }
