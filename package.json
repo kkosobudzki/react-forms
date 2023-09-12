@@ -1,7 +1,6 @@
 {
   "name": "@nosytools/react-forms",
-  "version": "1.0.0",
-  "module": "index.ts",
+  "version": "1.0.1",
   "type": "module",
   "devDependencies": {
     "@happy-dom/global-registrator": "^11.0.2",
