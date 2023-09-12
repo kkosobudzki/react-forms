@@ -16,16 +16,7 @@
     "react": "^17.0.0",
     "typescript": "^5.0.0"
   },
-  "exports": {
-	".": {
-		"import": {
-			"types": "out/index.d.ts",
-			"default": "out/index.js"
-		}
-	}
-  },
   "main:": "out/index.js",
-  "types": "out/index.d.ts",
   "files": [
 	"out/**/*"
   ]
