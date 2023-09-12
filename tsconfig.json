@@ -23,6 +23,7 @@
 	"declaration": true,
 	"declarationMap": true,
 	"emitDeclarationOnly": true,
-	"outDir": "out"
+	"outFile": "out/index.js",
+	"rootDir": "src"
   }
 }
